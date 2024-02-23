@@ -1,4 +1,4 @@
-# Lab Deployment in Azure
+# Lab Deployment in Azure - Azure Migrate
 
 Within this repo you will find an ARM template that deploys a virtual machine within Azure and then helps you build out a small lab environment within that virtual machine that can be used to replicate an on-prem solution you can use to set up Azure Backup, Azure Site Recovery, Azure Migrate, etc. 
 
@@ -12,7 +12,8 @@ Within this repo you will find an ARM template that deploys a virtual machine wi
 
 # Table of contents
 
-- [Lab Deployment in Azure](#lab-deployment-in-azure)
+- [Lab Deployment in Azure - Azure Migrate](#lab-deployment-in-azure---azure-migrate)
+- [Table of contents](#table-of-contents)
   - [Azure VM Details](#azure-vm-details)
   - [Azure VM Host Credentials](#azure-vm-host-credentials)
   - [Lab Details](#lab-details)
@@ -63,6 +64,12 @@ None of the servers are activated with licenses, if you have an MSDN subscriptio
 ## Lab virtual machines IP Information
 
 Once the servers are deployed you need to carry out the following configuration within the servers manually: 
+
+![hyperv connect](./images/hypervConnect.png)
+
+Use credentials tailwindtraders\administrator with password: demo@pass123
+
+IP Configuration Settings: Control Panel > Network & Internet > Network Connections > LAN2 / Ethernet 2 > Properties > IPv4 (Properties)
 
 - Log into AD01 and set the server to have a static IP configuration as follows: 
     - IP Address: 192.168.0.2
