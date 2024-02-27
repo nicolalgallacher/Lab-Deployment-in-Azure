@@ -1,44 +1,17 @@
 # Assess the lab with Azure Migrate
 
-## Deploy the Azure lab
-
-The first thing that you need to do is deploy the Azure virtual machine (VM) that will act as your on-prem environment.  You can start the deployment via the following button: 
-
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fweeyin83%2FLab-Deployment-in-Azure%2Fmain%2FVMdeploy.json" target="_blank">
-    <img src="http://azuredeploy.net/deploybutton.png"/>
-</a>
-
-Alternatively if you would like to deploy the lab using Azure Bicep you can clone the repo and deploy the template using the following Azure PowerShell commands: 
-
-```powershell
-
-## Create variables - modify these to suit your deployment needs
-$ResourceGroupName = "AzureLab"
-$Location = "uksouth"
-$BicepDeploymentName = "AzureLabDeployment"
-$HyperVHostName = "updateme"
-$HyperVHostAdminUserName = "adminuser"
-$HyperVHostAdminPassword = ConvertTo-SecureString -AsPlainText -Force "demo@password123"
-$vnetNeworExisting = "new"
-
-## Create an Azure Resource Group
-New-AzResourceGroup -Name $ResourceGroupName -Location $Location
-
-## Deploy the Azure Lab using Bicep
-New-AzResourceGroupDeployment -name $BicepDeploymentName -ResourceGroupName $ResourceGroupName -TemplateFile VMdeploy.bicep -HyperVHostAdminUserName $HyperVHostAdminUserName -HyperVHostAdminPassword $HyperVHostAdminPassword -vnetNeworExisting $vnetNeworExisting -HyperVHostName $HyperVHostName
-```
-
-_It can take 50-70 minutes for the lab to fully deploy._
-
 # Table of contents
 
-- [Set up the lab](#set-up-the-lab)
-- [Build a server to install Azure Migrate on](#discover-with-azure-migrate)
-- [Configure remote access on servers](#configure-remote-access-on-servers)
-- [Create an Azure Migrate project](#create-an-azure-migrate-project)
-- [Install the Azure Migrate appliance](#install-the-azure-migrate-appliance)
-- [Configure the Azure Migrate appliance - Azure connection](#configure-the-azure-migrate-appliance---azure-connection)
-- [Configure the Azure Migrate appliance - Manage credentials and discovery sources](#configure-the-azure-migrate-appliance---manage-credentials-and-discovery-sources)
+- [Assess the lab with Azure Migrate](#assess-the-lab-with-azure-migrate)
+- [Table of contents](#table-of-contents)
+  - [Set up the lab](#set-up-the-lab)
+  - [Discover with Azure Migrate](#discover-with-azure-migrate)
+    - [Build a server to install Azure Migrate on](#build-a-server-to-install-azure-migrate-on)
+  - [Configure remote access on servers](#configure-remote-access-on-servers)
+    - [Create an Azure Migrate project](#create-an-azure-migrate-project)
+    - [Install the Azure Migrate appliance](#install-the-azure-migrate-appliance)
+    - [Configure the Azure Migrate appliance - Azure connection](#configure-the-azure-migrate-appliance---azure-connection)
+    - [Configure the Azure Migrate appliance - Manage credentials and discovery sources](#configure-the-azure-migrate-appliance---manage-credentials-and-discovery-sources)
 
 ## Set up the lab
 

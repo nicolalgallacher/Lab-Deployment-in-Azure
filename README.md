@@ -14,16 +14,21 @@ Within this repo you will find an ARM template that deploys a virtual machine wi
 
 - [Lab Deployment in Azure - Azure Migrate](#lab-deployment-in-azure---azure-migrate)
 - [Table of contents](#table-of-contents)
+- [Prerequisites](#prerequisites)
   - [Azure VM Details](#azure-vm-details)
   - [Azure VM Host Credentials](#azure-vm-host-credentials)
   - [Lab Details](#lab-details)
   - [Lab Deployment](#lab-deployment)
   - [Lab virtual machines IP Information](#lab-virtual-machines-ip-information)
   - [Lab VM Windows Updates](#lab-vm-windows-updates)
+  - [ISO Download](#iso-download)
+- [Tutorials and Hacks](#tutorials-and-hacks)
   - [Lab Use Cases](#lab-use-cases)
   - [Azure Migrate Setup](#azure-migrate-setup)
   - [Other Tutorials](#other-tutorials)
   - [Credits](#credits)
+
+# Prerequisites 
 
 ## Azure VM Details
 This lab is all hosted within an Azure VM.  The Azure VM allows for nested virtualisation. 
@@ -112,6 +117,11 @@ IP Configuration Settings: Control Panel > Network & Internet > Network Connecti
 ## Lab VM Windows Updates
 
 If you are deploying this lab after March 2023 and want to update patches, you can initial this manually.  Alternatively there is a script on the file share **\\FS01\TT-Files\ITScripts\Updates.ps1** that can be ran and force patching.
+
+## ISO Download
+Obtain an ISO for Windows Server 2022 and store it within your Azure VM - if you have an MSDN subscription you can download the ISO from https://my.visualstudio.com/. Alternatively you can download an evaluation copy from https://www.microsoft.com/evalcenter/download-windows-server-2022.
+
+# Tutorials and Hacks 
 
 ## Lab Use Cases
 This lab has been designed to try and simulate an on-prem infrastructure, with common servers you'd encounter or need.  A domain controller, file server, SQL database, and some web servers. 
