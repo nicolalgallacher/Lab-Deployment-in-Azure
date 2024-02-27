@@ -17,10 +17,12 @@ Within this repo you will find an ARM template that deploys a virtual machine wi
   - [Azure VM Details](#azure-vm-details)
   - [Azure VM Host Credentials](#azure-vm-host-credentials)
   - [Lab Details](#lab-details)
+  - [Lab Deployment](#lab-deployment)
   - [Lab virtual machines IP Information](#lab-virtual-machines-ip-information)
   - [Lab VM Windows Updates](#lab-vm-windows-updates)
   - [Lab Use Cases](#lab-use-cases)
-  - [Tutorials](#tutorials)
+  - [Azure Migrate Setup](#azure-migrate-setup)
+  - [Other Tutorials](#other-tutorials)
   - [Credits](#credits)
 
 ## Azure VM Details
@@ -60,7 +62,10 @@ The FS01 server is a file server.  It has the file server role installed on it, 
 SQL01 is the database server, it has the SQL server role installed and the SQL server management tools installed. 
 
 None of the servers are activated with licenses, if you have an MSDN subscription you can get product keys to activate the servers or run them as is with a trial license. 
- 
+
+## Lab Deployment 
+* [Lab deployment steps](Tutorials/lab-deployment.md)
+
 ## Lab virtual machines IP Information
 
 Once the servers are deployed you need to carry out the following configuration within the servers manually: 
@@ -117,13 +122,14 @@ You can spin up this lab and try out some of the following:
 * Deploy Azure Migrate and assess the workloads _(note you will have to treat the servers like physical servers as you don't have access to assess the top Hyper-V layer)_
 * Any other use cases you might have... 
 
-## Tutorials
+## Azure Migrate Setup 
 
 Some tutorials on how to use this lab have been created: 
-
-* [Lab deployment steps](Tutorials/lab-deployment.md)
-* [Use Azure File Shares with the lab](Tutorials/file-server.md)
 * [Set up an Azure Migrate appliance and walk through discovering servers](Tutorials/azure-migrate.md)
+
+## Other Tutorials 
+
+* [Use Azure File Shares with the lab](Tutorials/file-server.md)
 
 
 ## Credits
